@@ -23,7 +23,7 @@ public class VacinadoView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.view_vacinados);
+        setContentView(R.layout.list_vacinados);
         db = LocalDataBase.getDataBase(getApplicationContext());
         edtVacinado = findViewById(R.id.edtVacinado);
         btnSalvar = findViewById(R.id.btnSalvarVacinado);

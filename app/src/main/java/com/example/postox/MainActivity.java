@@ -15,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void listarVacinados( View view) {
+
         startActivity(new Intent(this, VacinadoList.class));
     }
 
     public void listarVacinas(View view) {
+
         startActivity(new Intent(this, VacinaList.class));
     }
 }

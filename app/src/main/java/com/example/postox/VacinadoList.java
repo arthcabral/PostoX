@@ -22,7 +22,7 @@ public class VacinadoList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_vacinados);
+        setContentView(R.layout.view_vacinados);
         db = LocalDataBase.getDataBase(getApplicationContext());
         listViewVacinados = findViewById(R.id.listViewVacinados);
     }
@@ -35,10 +35,10 @@ public class VacinadoList extends AppCompatActivity {
     }
 
     private void preencheVacinados() {
-       // vacinados = db.vacinadoModel().getAll();
+        vacinados = db.vacinadoModel().getAll();
         ArrayAdapter<Vacinado> vacinadosAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, vacinados);
         listViewVacinados.setAdapter(vacinadosAdapter);
-        listViewVacinados.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        listViewVacinados.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Vacinado vacinadoselecionado = vacinados.get(position);
                 edtIntent.putExtra("VACINADO_SELECIONADO_ID", vacinadoselecionado.numVacinado);
@@ -51,7 +51,8 @@ public class VacinadoList extends AppCompatActivity {
 
         startActivity(edtIntent);
     }
-}
+
     public void voltar(View view) {
 
     }
+}
