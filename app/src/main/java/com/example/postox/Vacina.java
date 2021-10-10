@@ -1,5 +1,6 @@
 package com.example.postox;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -8,12 +9,12 @@ public class Vacina {
 
     @PrimaryKey(autoGenerate = true)
     int vacinaId;
+    @ColumnInfo(name = "nomeVacina")
     String nomeVacina;
+    @ColumnInfo(name = "fabricante")
     String fabricante;
 
-    public Vacina() {
-
-    }
+    public Vacina() { }
 
     public Vacina(int vacinaId, String nomeVacina, String fabricante) {
         this.vacinaId = vacinaId;

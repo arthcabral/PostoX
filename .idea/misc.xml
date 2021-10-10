@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/activity_main.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/list_vacina.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/list_vacinados.xml" value="0.22" />
+        <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/list_vacinas.xml" value="0.25" />
+        <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/view_vacina.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/view_vacinados.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/Arthur Cabral/AndroidStudioProjects/PostoX/app/src/main/res/layout/view_vacinas.xml" value="0.10989583333333333" />
       </map>
     </option>
   </component>

@@ -8,12 +8,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.RoomDatabase;
 
 import java.util.List;
 
 public class VacinadoList extends AppCompatActivity {
 
-    LocalDataBase db;
+    RoomDatabase.Builder<LocalDataBase> db;
     List<Vacinado> vacinados;
     ListView listViewVacinados;
     Intent edtIntent;
@@ -30,11 +31,11 @@ public class VacinadoList extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         edtIntent = new Intent(this, VacinadoView.class);
-        preencheVaciandos();
+        preencheVacinados();
     }
 
-    private void preencheVaciandos() {
-        vacinados = db.vacinadoModel().getAll();
+    private void preencheVacinados() {
+       // vacinados = db.vacinadoModel().getAll();
         ArrayAdapter<Vacinado> vacinadosAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, vacinados);
         listViewVacinados.setAdapter(vacinadosAdapter);
         listViewVacinados.setOnItemClickListener(new AdapterView.OnItemClickListener(){

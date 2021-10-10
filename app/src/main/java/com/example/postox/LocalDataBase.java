@@ -9,9 +9,9 @@ import androidx.room.RoomDatabase;
 @Database(entities = {Vacinado.class, Vacina.class}, version = 1)
 public abstract class LocalDataBase extends RoomDatabase {
 
-    private static LocalDataBase INSTANCE;
+    private static Builder<LocalDataBase> INSTANCE;
 
-    public static LocalDataBase getDataBase(Context context)  {
+     public static Builder<LocalDataBase> getDataBase(Context context)  {
         if(INSTANCE == null) {
             INSTANCE = Room.databaseBuilder(context.getApplicationContext(), LocalDataBase.class, "ControleVacinas").allowMainThreadQueries();
         }
@@ -20,5 +20,5 @@ public abstract class LocalDataBase extends RoomDatabase {
 
     public abstract VacinadoDAO vacinadoModel();
 
-    public abstract VAcinaDAO vacinaModel();
+    public abstract VacinaDAO vacinaModel();
 }
