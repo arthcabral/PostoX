@@ -8,13 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import java.util.List;
 
 public class VacinadoList extends AppCompatActivity {
 
-    RoomDatabase.Builder<LocalDataBase> db;
+    LocalDatabase db;
     List<Vacinado> vacinados;
     ListView listViewVacinados;
     Intent edtIntent;
@@ -22,8 +23,8 @@ public class VacinadoList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.view_vacinados);
-        db = LocalDataBase.getDataBase(getApplicationContext());
+        setContentView(R.layout.list_vacinados);
+        db = LocalDatabase.getDataBase (getApplicationContext());
         listViewVacinados = findViewById(R.id.listViewVacinados);
     }
 
@@ -33,6 +34,8 @@ public class VacinadoList extends AppCompatActivity {
         edtIntent = new Intent(this, VacinadoView.class);
         preencheVacinados();
     }
+
+
 
     private void preencheVacinados() {
         vacinados = db.vacinadoModel().getAll();
@@ -53,6 +56,6 @@ public class VacinadoList extends AppCompatActivity {
     }
 
     public void voltar(View view) {
-
+        finish();
     }
 }

@@ -2,6 +2,7 @@ package com.example.postox;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(foreignKeys = @ForeignKey(entity = Vacina.class,
@@ -15,7 +16,7 @@ public class Vacinado {
         String nomePessoa;
         String cpf;
         int idade;
-
+    @Ignore
     public Vacinado(){
 
     }
@@ -69,6 +70,9 @@ public class Vacinado {
         this.idade = idade;
     }
 
-    //public void set
+    @Override
+    public String toString() {
+        return this.vacinaId + ": " + this.nomePessoa;
+    }
 
 }

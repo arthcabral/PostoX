@@ -67,11 +67,18 @@
         app:layout_constraintTop_toBottomOf="@+id/edtIdade">
 
         <Button
-            android:id="@+id/edtSalvar"
+            android:id="@+id/btnSalvarVacinado"
             android:layout_width="106dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Salvar" />
+
+        <Button
+            android:id="@+id/btnExcluirVacinado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Excluir" />
 
         <Button
             android:id="@+id/edtVoltarVacinado"
@@ -79,6 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Voltar" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
